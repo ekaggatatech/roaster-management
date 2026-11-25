@@ -1,0 +1,264 @@
+/* =================================
+   SHIFT MANAGEMENT CONTAINER
+================================= */
+
+.shift-container {
+  width: 100%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.shift-container h1 {
+  font-size: 24px;
+  color: #263445;
+  margin-bottom: 10px;
+}
+
+.shift-description {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.shift-container h2 {
+  font-size: 18px;
+  color: #263445;
+  margin-bottom: 18px;
+}
+
+/* =================================
+   FORM CARD
+================================= */
+
+.shift-form-card {
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 9px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.shift-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.shift-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shift-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.shift-form-group input,
+.shift-form-group select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dce3ec;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #334155;
+  outline: none;
+}
+
+.shift-form-group input:focus,
+.shift-form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =================================
+   FORM BUTTONS
+================================= */
+
+.shift-form-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.shift-form-actions button {
+  min-height: 42px;
+  padding: 10px 18px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.shift-form-actions button:hover {
+  background: #1d4ed8;
+}
+
+.shift-form-actions .shift-cancel-btn {
+  background: #64748b;
+}
+
+.shift-form-actions .shift-cancel-btn:hover {
+  background: #475569;
+}
+
+/* =================================
+   SHIFT LIST
+================================= */
+
+.shift-section {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.shift-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.shift-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.shift-section th {
+  background: #f1f5f9;
+  color: #334155;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.shift-section th,
+.shift-section td {
+  padding: 13px 14px;
+  border-bottom: 1px solid #edf0f4;
+  white-space: nowrap;
+}
+
+.shift-section td {
+  color: #526174;
+  font-size: 13px;
+}
+
+.shift-section tr:hover td {
+  background: #f8fafc;
+}
+
+/* =================================
+   STATUS
+================================= */
+
+.shift-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #eaf1ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =================================
+   TABLE BUTTONS
+================================= */
+
+.shift-section td button {
+  padding: 8px 13px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.shift-section td button:hover {
+  background: #1d4ed8;
+}
+
+.shift-section td .shift-delete-btn {
+  background: #ef4444;
+}
+
+.shift-section td .shift-delete-btn:hover {
+  background: #dc2626;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+  .shift-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .shift-container {
+    padding: 15px;
+  }
+
+  .shift-form {
+    grid-template-columns: 1fr;
+  }
+
+  .shift-form-actions {
+    flex-wrap: wrap;
+  }
+}
+/* Shift List Filter Controls */
+.shift-filter-controls {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0 25px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.shift-filter-controls select,
+.shift-filter-controls input {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  min-width: 180px;
+}
+
+.shift-filter-controls label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.shift-filter-controls button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shift-filter-controls button:hover {
+  background-color: #1d4ed8;
+}

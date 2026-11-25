@@ -1,0 +1,175 @@
+/* ==============================
+   HOURMAKER - SHIFT SWAP MANAGEMENT
+================================ */
+
+.swap-container {
+  width: 100%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 60, 100, 0.05);
+}
+
+.swap-container h2 {
+  color: #172b4d;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.swap-container h3 {
+  color: #263b5b;
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.swap-container p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+/* ==============================
+   SWAP REQUEST FORM
+================================ */
+
+.swap-form {
+  background: #f8faff;
+  border: 1px solid #e2eaf5;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px 20px;
+}
+
+.swap-form h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.swap-form label {
+  color: #344966;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+
+.swap-form select {
+  width: 100%;
+  min-height: 45px;
+  padding: 10px 12px;
+  border: 1px solid #d8e0eb;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #263445;
+  outline: none;
+}
+
+.swap-form select:focus {
+  border-color: #2864ed;
+  box-shadow: 0 0 0 3px rgba(40, 100, 237, 0.12);
+}
+
+/* ==============================
+   BUTTONS
+================================ */
+
+.swap-container button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #2864ed;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin: 5px;
+}
+
+.swap-container button:hover:not(:disabled) {
+  background: #1d4fc4;
+  transform: translateY(-1px);
+}
+
+.swap-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Create request button */
+.swap-form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 190px;
+}
+
+/* Refresh button */
+.swap-container > button {
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   SWAP REQUEST CARDS
+================================ */
+
+.swap-card {
+  background: #ffffff;
+  border: 1px solid #e2eaf5;
+  border-left: 4px solid #2864ed;
+  border-radius: 10px;
+  padding: 22px;
+  margin: 18px 0;
+  box-shadow: 0 3px 10px rgba(30, 60, 100, 0.05);
+}
+
+.swap-card h3 {
+  color: #172b4d;
+  border-bottom: 1px solid #e8edf5;
+  padding-bottom: 12px;
+}
+
+.swap-card strong {
+  color: #344966;
+}
+
+/* Employee and manager action groups */
+.swap-card button {
+  min-width: 95px;
+  margin-top: 10px;
+}
+
+/* Error messages */
+.swap-container > p {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 700px) {
+  .swap-container {
+    padding: 18px;
+  }
+
+  .swap-form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .swap-form h3,
+  .swap-form button {
+    grid-column: 1;
+  }
+
+  .swap-card {
+    padding: 16px;
+  }
+
+  .swap-container h2 {
+    font-size: 22px;
+  }
+}

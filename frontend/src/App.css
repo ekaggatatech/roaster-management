@@ -1,0 +1,426 @@
+/* =====================================
+   HOURMAKER - GLOBAL STYLES
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #263445;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =====================================
+   MAIN APP LAYOUT
+===================================== */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f7fa;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #526174;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+  border-right: 1px solid #e5e7eb;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px 35px;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #263445;
+}
+
+.menu-heading {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 0 12px;
+  margin-bottom: 15px;
+}
+
+/* =====================================
+   SIDEBAR NAVIGATION
+===================================== */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #526174;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-button:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.nav-button.active {
+  background: #eaf1ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.nav-icon {
+  width: 23px;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* =====================================
+   SIDEBAR FOOTER
+===================================== */
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 16px 10px 5px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sidebar-footer p {
+  color: #263445;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.sidebar-footer span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+}
+
+/* =====================================
+   TOP HEADER
+===================================== */
+
+.top-header {
+  min-height: 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.top-header h1 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #263445;
+  margin-bottom: 5px;
+}
+
+.top-header p {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #526174;
+}
+
+.profile-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================================
+   PAGE CONTENT
+===================================== */
+
+.content-area {
+  padding: 25px 30px;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* =====================================
+   HEADINGS
+===================================== */
+
+.content-area h1 {
+  font-size: 25px;
+  color: #263445;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.content-area h2 {
+  font-size: 20px;
+  color: #263445;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.content-area h3 {
+  font-size: 16px;
+  color: #334155;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.content-area p {
+  color: #718096;
+}
+
+/* =====================================
+   FORMS AND INPUTS
+===================================== */
+
+.content-area input,
+.content-area select,
+.content-area textarea {
+  padding: 11px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #334155;
+  outline: none;
+  margin: 5px;
+  min-height: 40px;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.content-area input::placeholder,
+.content-area textarea::placeholder {
+  color: #94a3b8;
+}
+
+.content-area input:focus,
+.content-area select:focus,
+.content-area textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.content-area button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 5px;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.content-area button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.15);
+}
+
+/* =====================================
+   TABLES
+===================================== */
+
+.content-area table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  margin-top: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.content-area th {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+  text-align: left;
+}
+
+.content-area th,
+.content-area td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 13px;
+}
+
+.content-area td {
+  color: #526174;
+}
+
+.content-area tr:hover td {
+  background: #f8fafc;
+}
+
+/* =====================================
+   CHECKBOXES
+===================================== */
+
+.content-area input[type="checkbox"] {
+  min-height: auto;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 215px;
+    min-width: 215px;
+  }
+
+  .content-area {
+    padding: 20px;
+  }
+
+  .top-header {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .brand {
+    padding-bottom: 15px;
+  }
+
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-button {
+    font-size: 12px;
+    padding: 10px 7px;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .top-header {
+    padding: 15px;
+  }
+
+  .top-header h1 {
+    font-size: 17px;
+  }
+
+  .content-area {
+    padding: 15px;
+  }
+
+  .content-area table {
+    min-width: 600px;
+  }
+}

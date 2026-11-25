@@ -1,0 +1,379 @@
+/* =====================================
+   HOURMAKER - SHIFT REQUIREMENT MANAGEMENT
+===================================== */
+
+.shift-requirement-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  min-height: 100%;
+  color: #263445;
+}
+
+/* Main heading */
+
+.shift-requirement-container > h2:first-child {
+  text-align: center;
+  color: #172b4d;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* Section headings */
+
+.shift-requirement-container h3 {
+  color: #172b4d;
+  text-align: center;
+  font-size: 21px;
+  margin: 30px 0 20px;
+}
+
+.shift-requirement-container h4 {
+  color: #263b5b;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+/* Requirement form */
+
+.shift-requirement-container form {
+  background: #f7f9ff;
+  border: 1px solid #e1e9f7;
+  border-radius: 12px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Form fields */
+
+.shift-requirement-container form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shift-requirement-container label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #344966;
+}
+
+.shift-requirement-container input:not([type="checkbox"]),
+.shift-requirement-container select {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 13px;
+  border: 1px solid #d8e0eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #263445;
+  outline: none;
+}
+
+.shift-requirement-container input:focus,
+.shift-requirement-container select:focus {
+  border-color: #2864ed;
+  box-shadow: 0 0 0 3px rgba(40, 100, 237, 0.12);
+}
+
+/* Form button and message */
+
+.shift-requirement-container form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 190px;
+}
+
+/* Buttons */
+
+.shift-requirement-container button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2864ed;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin: 4px;
+}
+
+.shift-requirement-container button:hover {
+  background: #174fc7;
+  transform: translateY(-1px);
+}
+
+/* Status and message */
+
+.shift-requirement-container p {
+  color: #718096;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Requirements table */
+
+.shift-requirement-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  margin: 20px 0 35px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.shift-requirement-container th {
+  background: #edf2f9;
+  color: #263b5b;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.shift-requirement-container th,
+.shift-requirement-container td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e8edf3;
+  font-size: 13px;
+}
+
+.shift-requirement-container td {
+  color: #5b6b82;
+}
+
+.shift-requirement-container tbody tr:hover {
+  background: #f7f9ff;
+}
+
+/* Assignment section */
+
+.shift-requirement-container > div:last-child {
+  background: #f7f9ff;
+  border: 1px solid #e1e9f7;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+.shift-requirement-container > div:last-child > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shift-requirement-container > div:last-child > div:first-child > div {
+  background: #ffffff;
+  border: 1px solid #e1e9f7;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Employee checkboxes */
+
+.shift-requirement-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2864ed;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Selected requirement details */
+
+.shift-requirement-container > div:last-child > div:nth-of-type(3) {
+  background: #ffffff;
+  border: 1px solid #e1e9f7;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Assignment button */
+
+.shift-requirement-container > div:last-child > button {
+  display: block;
+  min-width: 190px;
+  margin: 20px auto 0;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+  .shift-requirement-container {
+    padding: 20px;
+  }
+
+  .shift-requirement-container table {
+    min-width: 900px;
+  }
+
+  .shift-requirement-container > div:last-child > div:first-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .shift-requirement-container form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .shift-requirement-container > div:last-child > div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .shift-requirement-container {
+    padding: 15px;
+  }
+}
+
+/* =====================================
+   EMPLOYEE ASSIGNMENT SECTION
+===================================== */
+
+.assignment-section {
+  background: #f7f9ff;
+  border: 1px solid #e1e9f7;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 35px;
+}
+
+.assignment-section h3 {
+  text-align: center;
+  color: #172b4d;
+  margin-bottom: 25px;
+}
+
+.employee-selection h4 {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* Employee cards grid */
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.employee-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e1e9f7;
+  border-radius: 9px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-card:hover {
+  border-color: #2864ed;
+  background: #eef3ff;
+}
+
+.employee-card input {
+  width: 17px;
+  height: 17px;
+  accent-color: #2864ed;
+}
+
+.employee-card span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.employee-card strong {
+  color: #263b5b;
+  font-size: 14px;
+}
+
+.employee-card small {
+  color: #718096;
+  font-size: 12px;
+}
+
+/* Requirement dropdown */
+
+.requirement-selection {
+  margin-top: 25px;
+}
+
+.requirement-selection label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.requirement-selection select {
+  width: 100%;
+  min-height: 48px;
+}
+
+/* Selected employee count */
+
+.selected-count {
+  text-align: center;
+  margin: 22px 0;
+  color: #52647d;
+  font-size: 15px;
+}
+
+/* Requirement details */
+
+.selected-requirement-details {
+  background: #ffffff;
+  border: 1px solid #dce6f8;
+  border-left: 4px solid #2864ed;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.selected-requirement-details h4 {
+  color: #172b4d;
+  margin-bottom: 15px;
+}
+
+.selected-requirement-details p {
+  margin: 10px 0;
+}
+
+/* Assign button */
+
+.assign-button {
+  display: block;
+  min-width: 190px;
+  margin: 25px auto 0 !important;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assignment-section {
+    padding: 15px;
+  }
+}
+.employee-card:has(input:checked) {
+  background: #eef3ff;
+  border: 1px solid #2864ed;
+}
+
+.employee-card:has(input:checked) strong {
+  color: #2864ed;
+}
